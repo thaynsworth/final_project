@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :crimes
-
   resources :users
   resources :sessions
 
