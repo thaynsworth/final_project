@@ -26,8 +26,10 @@ function drawMap(){
 }
 
 function getData(){
+	var options   = options || crimeOptions()
+  var name       = options.name || ""
 	$.ajax({
-		url: '/crimes', 
+		url: '/crimes?borough='+encodeURI(name), 
 		dataType: 'JSON', 
 		method: 'GET', 
 		success: function(data){
@@ -36,20 +38,42 @@ function getData(){
 	});
 }
 
+function resetMap(){
+  $(markers).each(function(idx, marker){
+    map.removeLayer(marker);
+  });
+  markers = [];
+}
+
 function drawData(data){
+	resetMap();
 	$.each(data, function(idx, crime){
 		var marker = new L.CircleMarker([crime.latitude, crime.longitude],{
 			color: "red",
-			radius: 10
+			radius: .5
 		})
+		.bindPopup(crime.name)
 		.addTo(map);
 		markers.push(marker);
 	})
 }
 
+function crimeOptions(){
+  var options = {};
+  options.name = $('select#name').val();
+  return options
+}
+
+function setHandlers(){
+  $("select").on("change", function(e){
+    getData();
+  });
+}
+
 $(function(){
   drawMap();
   getData();
+  setHandlers();
 })
 
 
