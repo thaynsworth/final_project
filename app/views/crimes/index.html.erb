@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Name</th>
       <th>Coordinates</th>
       <th>Year</th>
       <th>Total</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @crimes.each do |crime| %>
       <tr>
-        <td><%= crime.type %></td>
+        <td><%= crime.name %></td>
         <td><%= crime.coordinates %></td>
         <td><%= crime.year %></td>
         <td><%= crime.total %></td>
