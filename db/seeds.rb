@@ -7,8 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-crimePath = "#{Rails.root}/app/assets/javascripts/test_crimes.json"
-crimes = JSON.parse(File.read(crimePath))
-crimes.each do |crime|
-  Crime.create!(crime.except(:type, ))
-end
+    crimePath = "#{Rails.root}/app/assets/javascripts/test_crimes.json"
+    crimes = JSON.parse(File.read(crimePath))
+    crimes.each do |crime|
+      coordinates = crime['geometry']['coordinates'].join(',')
+      name = crime['properties']['CR']
+      year = crime['properties']['YR']
+      total = crime['properties']['TOT']
+      Crime.create({name: name, coordinates: coordinates, year: year, total: total})
+    end

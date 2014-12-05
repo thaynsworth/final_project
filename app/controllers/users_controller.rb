@@ -6,10 +6,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    file = File.read('./app/assets/javascripts/test_crimes.json')
-    data_hash = JSON.parse(file)
-    # coordinates = data_hash['features'][0]['geometry']['coordinates']
-    binding.pry
   end
 
   # GET /users/1
