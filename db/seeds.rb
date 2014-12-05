@@ -10,9 +10,16 @@
     crimePath = "#{Rails.root}/app/assets/javascripts/test_crimes.json"
     crimes = JSON.parse(File.read(crimePath))
     crimes.each do |crime|
-      coordinates = crime['geometry']['coordinates'].join(',')
+      longitude = crime['geometry']['coordinates'][0]
+      latitude = crime['geometry']['coordinates'][1]
       name = crime['properties']['CR']
       year = crime['properties']['YR']
       total = crime['properties']['TOT']
-      Crime.create({name: name, coordinates: coordinates, year: year, total: total})
+      Crime.create({
+        name: name,
+        year: year,
+        total: total,
+        longitude: longitude,
+        latitude: latitude
+      })
     end

@@ -25,6 +25,23 @@ function drawMap(){
   }).setView([40.738, -73.857], 12)
 }
 
+function getData(options){
+	$.ajax({
+		url: '/crimes', 
+		dataType: 'JSON', 
+		method: 'GET', 
+		success: function(data){
+			drawData(data);
+		}
+	});
+}
+
+function drawData(data){
+	$.each(data, function(idx, crime){
+		var marker = new L.CircleMarker([crime])
+	})
+}
+
 $(function(){
   drawMap();
 })
