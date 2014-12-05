@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+crimePath = "#{Rails.root}/app/assets/javascripts/test_crimes.json"
+crimes = JSON.parse(File.read(crimePath))
+crimes.each do |crime|
+  Crime.create!(crime.except(:type, ))
+end

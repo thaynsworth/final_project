@@ -1,0 +1,31 @@
+<h1>Listing crimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Coordinates</th>
+      <th>Year</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crimes.each do |crime| %>
+      <tr>
+        <td><%= crime.type %></td>
+        <td><%= crime.coordinates %></td>
+        <td><%= crime.year %></td>
+        <td><%= crime.total %></td>
+        <td><%= link_to 'Show', crime %></td>
+        <td><%= link_to 'Edit', edit_crime_path(crime) %></td>
+        <td><%= link_to 'Destroy', crime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crime', new_crime_path %>

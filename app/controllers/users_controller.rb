@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  require 'json'
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    file = File.read('./app/assets/javascripts/test_crimes.json')
+    data_hash = JSON.parse(file)
+    # coordinates = data_hash['features'][0]['geometry']['coordinates']
+    binding.pry
   end
 
   # GET /users/1
