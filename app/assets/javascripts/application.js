@@ -25,23 +25,33 @@ function drawMap(){
   }).setView([40.738, -73.857], 12)
 }
 
-function getData(){
+function getData(options){
 	var options   = options || crimeOptions()
-  var name       = options.name || ""
+  var name      = options.name || ""
+	console.log('about to fetch data')
 	$.ajax({
-		url: '/crimes?borough='+encodeURI(name), 
+		url: '/crimes?name='+name, 
 		dataType: 'JSON', 
 		method: 'GET', 
 		success: function(data){
+			console.log('finished with data')
 			drawData(data);
 		}
 	});
 }
 
 function resetMap(){
-  $(markers).each(function(idx, marker){
-    map.removeLayer(marker);
-  });
+	console.log('reseting map!!!!');
+	$('g').each(function(gTag){
+		map.removeLayer(gTag);
+	})
+
+	// $.each(markers, function(marker){
+	// 	map.removeLayer(marker);
+	// })
+  // $(markers).each(function(idx, marker){
+  //   map.removeLayer(marker);
+  // });
   markers = [];
 }
 
