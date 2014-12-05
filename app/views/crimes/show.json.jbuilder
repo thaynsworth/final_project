@@ -1,1 +1,1 @@
-json.extract! @crime, :id, :name, :coordinates, :year, :total, :created_at, :updated_at
+json.extract! @crime, :id, :name, :year, :total, :latitude, :longitude, :created_at, :updated_at

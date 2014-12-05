@@ -5,7 +5,7 @@ class CrimesController < ApplicationController
   # GET /crimes.json
   def index
     @crimes = Crime.all
-
+    @crimes.to_json
   end
 
   # GET /crimes/1

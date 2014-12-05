@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Coordinates:</strong>
-  <%= @crime.coordinates %>
-</p>
-
-<p>
   <strong>Year:</strong>
   <%= @crime.year %>
 </p>
@@ -20,5 +15,14 @@
   <%= @crime.total %>
 </p>
 
+<p>
+  <strong>Latitude:</strong>
+  <%= @crime.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @crime.longitude %>
+</p>
 <%= link_to 'Edit', edit_crime_path(@crime) %> |
 <%= link_to 'Back', crimes_path %>

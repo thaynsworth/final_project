@@ -16,10 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :coordinates %><br>
-    <%= f.text_field :coordinates %>
-  </div>
-  <div class="field">
     <%= f.label :year %><br>
     <%= f.text_field :year %>
   </div>
@@ -30,4 +26,12 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div> 
 <% end %>
