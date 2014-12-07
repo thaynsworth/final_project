@@ -1,6 +1,19 @@
 var map,
     markers = [];
 
+// var popup = L.popup();
+
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent("You clicked the map at " + e.latlng.toString())
+//         .openOn(map);
+// }  
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
 function drawMap(){
   L.mapbox.accessToken = 'pk.eyJ1IjoidGhheW5zd29ydGgiLCJhIjoiWThsS0FVbyJ9.Ra30ahPRIVNTX9FBGK-hLg';
   map = L.mapbox.map('map', 'thaynsworth.kcl6gjeb', {
@@ -10,16 +23,16 @@ function drawMap(){
 
 function resetMap(){
 	console.log('reseting map!!!!');
-	$('g').each(function(gTag){
-		map.removeLayer(gTag);
-	})
+	// $('g').each(function(gTag){
+	// 	map.removeLayer(gTag);
+	// })
 
 	// $.each(markers, function(marker){
 	// 	map.removeLayer(marker);
 	// })
-  // $(markers).each(function(idx, marker){
-  //   map.removeLayer(marker);
-  // });
+  $(markers).each(function(idx, marker){
+    map.removeLayer(marker);
+  });
   markers = [];
 }
 
@@ -123,6 +136,7 @@ $(function(){
   drawMap();
   getData();
   setHandlers();
+  map.on('click', onMapClick); 
 })
 
 
