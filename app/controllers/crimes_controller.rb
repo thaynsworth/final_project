@@ -72,6 +72,6 @@ class CrimesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def crime_params
-      params.require(:crime).permit(:type, :coordinates, :year, :total)
+      params.require(:crime).permit(:name, :coordinates, :year, :total)
     end
 end
