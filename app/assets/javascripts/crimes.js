@@ -23,22 +23,22 @@ function drawMap(){
 
 function resetMap(){
 	console.log('reseting map!!!!');
-	// $('g').each(function(gTag){
-	// 	map.removeLayer(gTag);
-	// })
-
-	// $.each(markers, function(marker){
-	// 	map.removeLayer(marker);
-	// })
   $(markers).each(function(idx, marker){
     map.removeLayer(marker);
   });
   markers = [];
 }
 
-function createCircle(data){
 
+typeData = {
+	MURDER: {color: 'red'},
+	RAPE: {color: 'blue'},
 }
+
+type = 'RAPE'
+
+typeData[type]
+
 
 
 function drawData(data){
@@ -56,7 +56,7 @@ function drawData(data){
 }
 
 
-// function drawData(data){
+// function drawInitialMap(data){
 // 	resetMap();
 // 	$.each(data, function(idx, crime){
 // 		if (crime.name == "ROBBERY"){
