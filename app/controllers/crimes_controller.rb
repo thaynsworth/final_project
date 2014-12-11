@@ -10,6 +10,11 @@ class CrimesController < ApplicationController
     @crimes.to_json
   end
 
+  def search_by_name
+    crimes = Crime.where(name: params["name"])
+    render json: crimes.to_json, status: 200
+  end
+
   # GET /crimes/1
   # GET /crimes/1.json
   def show

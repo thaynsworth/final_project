@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'crimes/search' => 'crimes#search_by_name'
+
   resources :crimes
   resources :users
   resources :sessions
