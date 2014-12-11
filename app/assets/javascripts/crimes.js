@@ -18,7 +18,7 @@ function drawMap(){
   L.mapbox.accessToken = 'pk.eyJ1IjoidGhheW5zd29ydGgiLCJhIjoiWThsS0FVbyJ9.Ra30ahPRIVNTX9FBGK-hLg';
   map = L.mapbox.map('map', 'thaynsworth.kcl6gjeb', {
     zoomControl: false
-  }).setView([40.738, -73.857], 11)
+  }).setView([40.7127, -74.0059], 10)
 }
 
 function resetMap(){
@@ -37,7 +37,7 @@ function resetMap(){
 }
 
 function createCircle(data){
-	
+
 }
 
 
@@ -157,7 +157,6 @@ function setHandlers(){
 
 $(function(){
   drawMap();
-  getData();
   setHandlers();
   map.on('click', onMapClick); 
 })
