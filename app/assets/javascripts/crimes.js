@@ -1,6 +1,16 @@
 var map,
     markers = [];
 
+typeData = {
+	'MURDER': {color: '#d11141'},
+	'RAPE': {color: '#00b159'},
+	'ROBBERY': {color: '#00aedb'},
+	'FELONY ASSAULT': {color: '#f37735'},
+	'BURGLARY': {color: '#ffc425'},
+	'GRAND LARCENY': {color: '#be29ec'},
+	'GRAND LARCENY OF MOTOR VEHICLE': {color: '#ff66cc'}
+};
+
 // var popup = L.popup();
 
 // function onMapClick(e) {
@@ -29,24 +39,12 @@ function resetMap(){
   markers = [];
 }
 
-
-typeData = {
-	MURDER: {color: 'red'},
-	RAPE: {color: 'blue'},
-}
-
-type = 'RAPE'
-
-typeData[type]
-
-
-
 function drawData(data){
 	resetMap();
 	$.each(data, function(idx, crime){
 		var marker = new L.CircleMarker([crime.latitude, crime.longitude],{
-				color: "red",
-				radius: 4
+				color: typeData[crime.name]['color'],
+				radius: 1
 		})	
 		.bindPopup(crime.name)
 		.addTo(map);
