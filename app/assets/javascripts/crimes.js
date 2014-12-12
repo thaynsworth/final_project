@@ -153,11 +153,7 @@ function setHandlers(){
   });
 }
 
-$(function(){
-  drawMap();
-  setHandlers();
-  map.on('click', onMapClick); 
-})
+
 
 
 
