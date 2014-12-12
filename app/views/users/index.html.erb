@@ -1,21 +1,19 @@
-
-<h1>5 Boroughs WalkSafe</h1>
-<div class="box">
-	<div class="stuff_in_box">
-		<%= link_to 'Crime Map', crimes_path %>
+<div class="city">
+	<h1>WalkSafe</h1>
+	<div class="box">
+		<div class="stuff_in_box">
+			<%= link_to 'Crime Map', crimes_path %>
+		</div>
 	</div>
 </div>
-
-<div>
-
-</div>
-
 <script>
 	
 // Adds the click function	
 // $("body").click(function() {
 //     $(this).toggleClass('clicked');
 // });
+
+
 function sunRise(){
   var sunshine = $("<img class='sunshine' src='./sun.png'>");
   $('body').append(sunshine);
@@ -24,17 +22,19 @@ function sunRise(){
   	height: '30%',
   	width: '15%',
   	float: 'right',
-  	bottom: '-250px',
-  	'z-index': '1'
+  	bottom: '-600px',
+  	'z-index': '1',
+  	display: 'block'
   });
   sunshine.animate({
-  	bottom: '270px'
-  }, 8000);
+  	bottom: '5px'
+  }, 9000);
 }
 
 $(function(){
 
-	$("body").toggleClass('clicked');
+	$("body").toggleClass('sky');
+
 	sunRise();
 
 })
