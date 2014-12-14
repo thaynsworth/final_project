@@ -1,17 +1,17 @@
-
-<div class="cloud">
-	<div class="sun">
-		<div class="city">
-			<h1>WalkSafe</h1>
-			<div class="box">
-				<div class="stuff_in_box">
-					<%= link_to 'Crime Map', crimes_path %>
+<div class="cloud2">
+	<div class="cloud1">
+		<div class="sun">
+			<div class="city">
+				<h1>WalkSafe</h1>
+				<div class="box">
+					<div class="stuff_in_box">
+						<%= link_to 'Crime Map', crimes_path %>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 <script>
 	
 // Adds the click function	
@@ -19,22 +19,40 @@
 //     $(this).toggleClass('clicked');
 // });
 
-function cloud(){
-	var cloud = $("<img class='cloud' src='./cloud_PNG2.png'>");
-	$('div.cloud').append(cloud);
-	cloud.css({
+function cloud1(){
+	var cloud1 = $("<img class='cloud1' src='./cloud_PNG2.png'>");
+	$('div.cloud1').append(cloud1);
+	cloud1.css({
 		position: 'relative',
-		'padding-top': '100px',
+		'padding-top': '60px',
   	height: '35%',
   	width: '20%',
   	left: '-500px',
 		'z-index': '1',
 		display: 'block'
 	});
-	cloud.delay(10000);
-	cloud.animate({
-		left: '500px'
-	}, 11000);
+	cloud1.delay(7000);
+	cloud1.animate({
+		left: '600px'
+	}, 27000);
+}
+
+function cloud2(){
+	var cloud2 = $("<img class='cloud2' src='./cloud2.png'>");
+	$('div.cloud2').append(cloud2);
+	cloud2.css({
+		position: 'relative',
+		'padding-top': '70px',
+  	height: '30%',
+  	width: '15%',
+  	left: '-500px',
+		'z-index': '1',
+		display: 'block'
+	});
+	cloud2.delay(2000);
+	cloud2.animate({
+		left: '400px'
+	}, 27000);
 }
 
 
@@ -59,7 +77,8 @@ $(function(){
 
 	$("body").toggleClass('sky');
 
-	cloud();
+	cloud1();
+	cloud2();
 	sunRise();
 	
 
