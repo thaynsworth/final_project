@@ -12,6 +12,7 @@
 		</div>
 	</div>
 </div>
+
 <script>
 	
 // Adds the click function	
@@ -20,38 +21,38 @@
 // });
 
 function cloud1(){
-	var cloud1 = $("<img class='cloud1' src='./cloud_PNG2.png'>");
+	var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
 	$('div.cloud1').append(cloud1);
 	cloud1.css({
 		position: 'relative',
 		'padding-top': '60px',
-  	height: '35%',
-  	width: '20%',
+  	height: '60%',
+  	width: '50%',
   	left: '-500px',
 		'z-index': '1',
 		display: 'block'
 	});
-	cloud1.delay(7000);
+	cloud1.delay(3000);
 	cloud1.animate({
-		left: '600px'
+		left: '400px'
 	}, 27000);
 }
 
 function cloud2(){
-	var cloud2 = $("<img class='cloud2' src='./cloud2.png'>");
+	var cloud2 = $("<img class='cloud2' src='./cloud3.png'>");
 	$('div.cloud2').append(cloud2);
 	cloud2.css({
 		position: 'relative',
-		'padding-top': '70px',
-  	height: '30%',
-  	width: '15%',
+		'padding-top': '40px',
+  	height: '40%',
+  	width: '30%',
   	left: '-500px',
 		'z-index': '1',
 		display: 'block'
 	});
 	cloud2.delay(2000);
 	cloud2.animate({
-		left: '400px'
+		left: '200px'
 	}, 27000);
 }
 
@@ -76,7 +77,6 @@ function sunRise(){
 $(function(){
 
 	$("body").toggleClass('sky');
-
 	cloud1();
 	cloud2();
 	sunRise();
