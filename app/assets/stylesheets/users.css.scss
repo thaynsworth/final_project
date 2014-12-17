@@ -32,7 +32,7 @@ body {
 	margin: 20px;
 	border: 2px solid black;
 	border-radius: 7px;
-	opacity: 0.2;
+	opacity: 0.7;
 	z-index: 4;
 	
 }
@@ -43,6 +43,12 @@ body {
 
 .stuff_in_box p {
 	color: black;
+}
+
+#login {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
 }
 
 #login_box {

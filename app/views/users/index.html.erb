@@ -5,12 +5,18 @@
 				<div class="city">
 					<div class="box">
 						<div class="stuff_in_box">
-
-							<h1>Welcome to WalkSafe!</h1>
-
-							<button id="login">Login</button>
-							<button id="signup">Sign Up</button>
-							<button id="about">About</button>
+								<p>WalkSafe</p>
+							<% if logged_in? %>
+								<button id="crime_map">Crime Map</button>
+								<button id="profile">Profile</button>
+								<button id="logout">
+									<%= link_to "Log out", logout_path, method: "delete" %>
+								</button>		
+							<% else %>
+								<button id="login">Login</button>
+								<button id="signup">Sign Up</button>
+								<button id="about">About</button>						
+							<% end %>
 
 						</div>
 					</div>
