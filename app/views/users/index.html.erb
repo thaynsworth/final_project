@@ -1,4 +1,4 @@
-<!-- <div id="empty-backdrop"> -->
+
 	<div class="cloud2">
 		<div class="cloud1">
 			<div class="sun">
@@ -33,7 +33,7 @@
 
 			    <%= f.submit "Log in", class: "btn btn-primary" %>
 			  <% end %>
-			  <div id="cancel">Cancel</div>
+			  <button id="login_cancel">Cancel</button>
 			 </div> 
 	  </div>
 	</div>
@@ -41,13 +41,16 @@
 	<div id="signup_box">
 		<div id="signup_text">
 			<%= render 'form' %>
+			<button id="signup_cancel">Cancel</button>
 		</div>
 	</div>
 
 	<div id="about_box">
-		<p>We are here to provide a service.</p>
+		<div id="about_text">
+			<p>We are here to provide a service.</p>
+			<button id="about_cancel">Cancel</button>
+		</div>
 	</div>
-<!-- </div> -->
 
 <script>
 	// Adds the click function	
@@ -57,12 +60,7 @@
 
 	function removeMainBox(){
 		$('.box').toggleClass('remove_box');
-	}
-
-	function loadMainBox(){
-		$('#login_box').slideToggle();
-		$('.remove_box').removeClass().addClass('box');
-	}
+	}	
 
 	function loginWindow(){
 		$('#login_box').slideToggle();
@@ -148,10 +146,18 @@
 			aboutWindow();
 			removeMainBox();
 		});	
-		$("#cancel").click(function(){
-			$('selector').css( 'cursor', 'pointer' );
-			loadMainBox();
-		})		
+		$("#login_cancel").click(function(){
+			loginWindow();
+			removeMainBox();
+		})
+		$("#signup_cancel").click(function(){
+			signupWindow();
+			removeMainBox();
+		})	
+		$("#about_cancel").click(function(){
+			aboutWindow();
+			removeMainBox();
+		})					
 	});
 
 </script>
