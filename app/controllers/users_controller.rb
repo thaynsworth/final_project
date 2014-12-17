@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  include SessionsHelper
   require 'json'
 
   # GET /users
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
 
 
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to WalkSafe!"
       redirect_to :controller => 'users', :action => 'index'
     else

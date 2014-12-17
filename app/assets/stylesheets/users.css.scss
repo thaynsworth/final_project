@@ -6,7 +6,6 @@
 body {
 	background-color: black;
 	transition:background-color 20s ease;
-	/*overflow: hidden;*/
 }
 
 .sky {
@@ -32,7 +31,7 @@ body {
 	margin: 20px;
 	border: 2px solid black;
 	border-radius: 7px;
-	opacity: 0.7;
+	opacity: 0.9;
 	z-index: 4;
 	
 }
@@ -41,14 +40,57 @@ body {
 	display: none;
 }
 
+.stuff_in_box {
+	margin-left: 80px;
+}
+
 .stuff_in_box p {
 	color: black;
+	font-size: 60px;
+	margin-left: 70px;
+
 }
 
 #login {
-	height: 100px;
-	width: 100px;
-	border-radius: 50px;
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: green;
+}
+
+#signup {
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: yellow;
+}
+
+#about {
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: red;
+}
+
+#crime_map {
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: green;
+}
+
+#profile {
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: yellow;
+}
+
+#logout {
+	height: 140px;
+	width: 140px;
+	border-radius: 70px;
+	background-color: red;
 }
 
 #login_box {
