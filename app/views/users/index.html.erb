@@ -82,6 +82,18 @@
 		$('#about_box').slideToggle();
 	}	
 
+	function onHover(){
+		$("button").mouseenter(function(){
+			$("button").css("background-color", "purple");
+			$("button").mouseleave(function(){
+				$("button").css("background-color", "green");
+				$("button").click(function(){			
+					loginWindow();
+					removeMainBox();
+				});	
+			});		
+		});
+	}
 	function cloud1(){
 		var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
 		$('div.cloud1').append(cloud1);
@@ -142,10 +154,11 @@
 		cloud1();
 		cloud2();
 		sunRise();
-		$("#login").click(function(){			
+
+		$("#login").click(function(){
 			loginWindow();
 			removeMainBox();
-		});
+		});			
 		$("#signup").click(function(){
 			signupWindow();
 			removeMainBox();
@@ -157,15 +170,15 @@
 		$("#login_cancel").click(function(){
 			loginWindow();
 			removeMainBox();
-		})
+		});
 		$("#signup_cancel").click(function(){
 			signupWindow();
 			removeMainBox();
-		})	
+		});
 		$("#about_cancel").click(function(){
 			aboutWindow();
 			removeMainBox();
-		})					
+		});					
 	});
 
 </script>
