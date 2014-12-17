@@ -1,41 +1,51 @@
-<div class="cloud2">
-	<div class="cloud1">
-		<div class="sun">
-			<div class="city">
-				<div class="box">
-					<div class="stuff_in_box">
+<div id="empty-backdrop">
+	<div class="cloud2">
+		<div class="cloud1">
+			<div class="sun">
+				<div class="city">
+					<div class="box">
+						<div class="stuff_in_box">
 
-						<h1>Welcome to WalkSafe!</h1>
+							<h1>Welcome to WalkSafe!</h1>
 
-						<button id="login">Login</button>
-						<button id="signup">Sign Up</button>
-						<button id="about">About</button>
+							<button id="login">Login</button>
+							<button id="signup">Sign Up</button>
+							<button id="about">About</button>
 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="login_box">
-	<div id="login_text">
-	  <%= form_for(:session, url: login_path) do |f| %>
+	<div id="login_box">
+		<div id="login_text">
+			<div id="stuff">
+				<p>Log in</p>
+			  <%= form_for(:session, url: login_path) do |f| %>
 
-	    <%= f.label :email %>
-	    <%= f.text_field :email, class: 'form-control' %>
+			    <%= f.label :email %>
+			    <%= f.text_field :email, class: 'form-control' %>
 
-	    <%= f.label :password %>
-	    <%= f.password_field :password_digest, class: 'form-control' %>
+			    <%= f.label :password %>
+			    <%= f.password_field :password_digest, class: 'form-control' %>
 
-	    <%= f.submit "Log in", class: "btn btn-primary" %>
-	  <% end %>
-  </div>
-</div>
+			    <%= f.submit "Log in", class: "btn btn-primary" %>
+			  <% end %>
+			  <div class="cancel">Cancel</div>
+			 </div> 
+	  </div>
+	</div>
 
-<div id="signup_box">
-	<div id="signup_text">
-		<%= render 'form' %>
+	<div id="signup_box">
+		<div id="signup_text">
+			<%= render 'form' %>
+		</div>
+	</div>
+
+	<div id="about_box">
+		<p>We are here to provide a service.</p>
 	</div>
 </div>
 
@@ -45,6 +55,14 @@
 	//     $(this).toggleClass('clicked');
 	// });
 
+	function removeMainBox(){
+		$('.box').toggleClass('remove_box');
+	}
+
+	function loadMainBox(){
+		$('.remove_box').toggleClass('box');
+	}
+
 	function loginWindow(){
 		$('#login_box').slideToggle();
 	}
@@ -53,6 +71,9 @@
 		$('#signup_box').slideToggle();
 	}
 
+	function aboutWindow(){
+		$('#about_box').slideToggle();
+	}	
 
 	function cloud1(){
 		var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
@@ -114,12 +135,19 @@
 		cloud1();
 		cloud2();
 		sunRise();
-		$("#login").click(function(){
+		$("#login").click(function(){			
 			loginWindow();
+			removeMainBox();
 		});
 		$("#signup").click(function(){
 			signupWindow();
 		});	
+		$("#about").click(function(){
+			aboutWindow();
+		});	
+		$(".cancel").hover(function(){
+			loadMainBox();
+		})		
 	});
 
 </script>
