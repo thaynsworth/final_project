@@ -89,9 +89,14 @@ body {
 }
 
 #signup_box {
-	width: 300px;
-	height: 300px;
-	background-color: yellow;
+	background-color: white;
+	width: 800px;
+	height: 500px;
+	margin-top: 100px;
+	margin-left: 250px;
+	border: 2px solid black;
+	border-radius: 7px;
+	opacity: 0.9;
 	z-index: 5;
 	display: none;
 	position: absolute;
@@ -99,7 +104,17 @@ body {
   bottom: 0;
   left: 0;
   right: 100;
-  margin: auto;
+}
+
+#signup_text {
+	width: 700px;
+	height: 375px;
+	border: 2px solid black;
+	border-radius: 7px;
+	background-color: darkgrey;
+	opacity: 1;
+	margin-top: 60px;
+	margin-left: 45px;	
 }
 
 #about_box {

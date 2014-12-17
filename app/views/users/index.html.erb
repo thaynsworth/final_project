@@ -1,4 +1,4 @@
-<div id="empty-backdrop">
+<!-- <div id="empty-backdrop"> -->
 	<div class="cloud2">
 		<div class="cloud1">
 			<div class="sun">
@@ -33,7 +33,7 @@
 
 			    <%= f.submit "Log in", class: "btn btn-primary" %>
 			  <% end %>
-			  <div class="cancel">Cancel</div>
+			  <div id="cancel">Cancel</div>
 			 </div> 
 	  </div>
 	</div>
@@ -47,7 +47,7 @@
 	<div id="about_box">
 		<p>We are here to provide a service.</p>
 	</div>
-</div>
+<!-- </div> -->
 
 <script>
 	// Adds the click function	
@@ -60,7 +60,8 @@
 	}
 
 	function loadMainBox(){
-		$('.remove_box').toggleClass('box');
+		$('#login_box').slideToggle();
+		$('.remove_box').removeClass().addClass('box');
 	}
 
 	function loginWindow(){
@@ -141,11 +142,14 @@
 		});
 		$("#signup").click(function(){
 			signupWindow();
+			removeMainBox();
 		});	
 		$("#about").click(function(){
 			aboutWindow();
+			removeMainBox();
 		});	
-		$(".cancel").hover(function(){
+		$("#cancel").click(function(){
+			$('selector').css( 'cursor', 'pointer' );
 			loadMainBox();
 		})		
 	});
