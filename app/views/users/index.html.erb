@@ -40,90 +40,86 @@
 </div>
 
 <script>
+	// Adds the click function	
+	// $("body").click(function() {
+	//     $(this).toggleClass('clicked');
+	// });
+
+	function loginWindow(){
+		$('#login_box').slideToggle();
+	}
+
+	function signupWindow(){
+		$('#signup_box').slideToggle();
+	}
 
 
-// Adds the click function	
-// $("body").click(function() {
-//     $(this).toggleClass('clicked');
-// });
+	function cloud1(){
+		var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
+		$('div.cloud1').append(cloud1);
+		cloud1.css({
+			position: 'relative',
+			'padding-top': '60px',
+	  	height: '60%',
+	  	width: '50%',
+	  	left: '-500px',
+			'z-index': '1',
+			display: 'block'
+		});
+		cloud1.delay(500);
+		cloud1.animate({
+			left: '600px'
+		}, 25000);
+	}
 
-function loginWindow(){
-	$('#login_box').slideToggle();
-}
-
-function signupWindow(){
-	$('#signup_box').slideToggle();
-}
-
-
-function cloud1(){
-	var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
-	$('div.cloud1').append(cloud1);
-	cloud1.css({
-		position: 'relative',
-		'padding-top': '60px',
-  	height: '60%',
-  	width: '50%',
-  	left: '-500px',
-		'z-index': '1',
-		display: 'block'
-	});
-	cloud1.delay(500);
-	cloud1.animate({
-		left: '600px'
-	}, 25000);
-}
-
-function cloud2(){
-	var cloud2 = $("<img class='cloud2' src='./cloud3.png'>");
-	$('div.cloud2').append(cloud2);
-	cloud2.css({
-		position: 'relative',
-		'padding-top': '40px',
-  	height: '40%',
-  	width: '30%',
-  	left: '-500px',
-		'z-index': '1',
-		display: 'block'
-	});
-	cloud2.delay(1500);
-	cloud2.animate({
-		left: '200px'
-	}, 30000);
-}
+	function cloud2(){
+		var cloud2 = $("<img class='cloud2' src='./cloud3.png'>");
+		$('div.cloud2').append(cloud2);
+		cloud2.css({
+			position: 'relative',
+			'padding-top': '40px',
+	  	height: '40%',
+	  	width: '30%',
+	  	left: '-500px',
+			'z-index': '1',
+			display: 'block'
+		});
+		cloud2.delay(1500);
+		cloud2.animate({
+			left: '200px'
+		}, 30000);
+	}
 
 
-function sunRise(){
-  var sunshine = $("<img class='sunshine' src='./sun.png'>");
-  $('div.sun').append(sunshine);
-  sunshine.css({
-  	position: 'relative',
-  	height: '30%',
-  	width: '15%',
-  	float: 'right',
-  	bottom: '-600px',
-  	'z-index': '1',
-  	display: 'block'
-  });
-  sunshine.animate({
-  	bottom: '5px'
-  }, 10000);
-}
-
-$(function(){
-
-	$("body").toggleClass('sky');
-	cloud1();
-	cloud2();
-	sunRise();
-	$("#login").click(function(){
-		loginWindow();
-	});
-	$("#signup").click(function(){
-		signupWindow();
-	})
+	function sunRise(){
+	  var sunshine = $("<img class='sunshine' src='./sun.png'>");
+	  $('div.sun').append(sunshine);
+	  sunshine.css({
+	  	position: 'relative',
+	  	height: '30%',
+	  	width: '15%',
+	  	float: 'right',
+	  	bottom: '-600px',
+	  	'z-index': '1',
+	  	display: 'block'
+	  });
+	  sunshine.animate({
+	  	bottom: '5px'
+	  }, 10000);
+	}
 	
+	$(function(){
 
-})
+		$("body").toggleClass('sky');
+		cloud1();
+		cloud2();
+		sunRise();
+		$("#login").click(function(){
+			loginWindow();
+		});
+		$("#signup").click(function(){
+			signupWindow();
+		});	
+	});
 
 </script>
