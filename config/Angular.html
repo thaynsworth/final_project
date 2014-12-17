@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.angularjs.org/snapshot/angular.js"></script>
+</head>
+<body>
+	
+	<div ng-controller="TopScopeController">
+		<input type="text" ng-model="textInput"/>
+		<h1>{{textInput}}</h1>
+		<div ng-controller="MiddleScopeController">
+			<input type="text" ng-model="textInput"/>
+			<h1>{{textInput}}</h1>
+			<div ng-controller="BottomScopeController">
+				<input type="text" ng-model="textInput"/>
+				<h1>{{textInput}}</h1>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var app = angular.module("ScopeControllerDemo", []);
+		app.controller("TopScopeController", ["$scope", function($scope){
+			$scope.textInput = "Hello, Lemurs";
+		}
+		]);
+		app.controller("MiddleScopeController", ["$scope",
+			function($scope){
+
+			}
+		]);
+	</script>
+
+
+</body>
+</html>

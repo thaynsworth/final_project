@@ -27,8 +27,8 @@ body {
 
 .box {
 	background-color: white;
-	width: 400px;
-	height: 200px;
+	width: 600px;
+	height: 300px;
 	margin: 20px;
 	border: 2px solid black;
 	border-radius: 7px;
@@ -39,4 +39,36 @@ body {
 
 .stuff_in_box p {
 	color: black;
+}
+
+#login_box {
+	width: 150	px;
+	height: 100px;
+	background-color: yellow;
+	z-index: 5;
+	display: none;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 100;
+  margin: auto;
+}
+
+#login_text {
+	position: center;
+}
+
+#signup_box {
+	width: 150	px;
+	height: 100px;
+	background-color: yellow;
+	z-index: 5;
+	display: none;
+	position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 100;
+  margin: auto;
 }

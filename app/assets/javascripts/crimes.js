@@ -44,7 +44,7 @@ function drawData(data){
 	$.each(data, function(idx, crime){
 		var marker = new L.CircleMarker([crime.latitude, crime.longitude],{
 				color: typeData[crime.name]['color'],
-				radius: 1
+				radius: 5
 		})	
 		.bindPopup(crime.name)
 		.addTo(map);

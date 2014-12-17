@@ -2,10 +2,15 @@
 	<div class="cloud1">
 		<div class="sun">
 			<div class="city">
-				<h1>WalkSafe</h1>
 				<div class="box">
 					<div class="stuff_in_box">
-						<%= link_to 'Crime Map', crimes_path %>
+
+						<h1>Welcome to WalkSafe!</h1>
+
+						<button id="login">Login</button>
+						<button id="signup">Sign Up</button>
+						<button id="about">About</button>
+
 					</div>
 				</div>
 			</div>
@@ -13,12 +18,43 @@
 	</div>
 </div>
 
+<div id="login_box">
+	<div id="login_text">
+	  <%= form_for(:session, url: login_path) do |f| %>
+
+	    <%= f.label :email %>
+	    <%= f.text_field :email, class: 'form-control' %>
+
+	    <%= f.label :password %>
+	    <%= f.password_field :password_digest, class: 'form-control' %>
+
+	    <%= f.submit "Log in", class: "btn btn-primary" %>
+	  <% end %>
+  </div>
+</div>
+
+<div id="signup_box">
+	<div id="signup_text">
+		<%= render 'form' %>
+	</div>
+</div>
+
 <script>
-	
+
+
 // Adds the click function	
 // $("body").click(function() {
 //     $(this).toggleClass('clicked');
 // });
+
+function loginWindow(){
+	$('#login_box').slideToggle();
+}
+
+function signupWindow(){
+	$('#signup_box').slideToggle();
+}
+
 
 function cloud1(){
 	var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
@@ -32,10 +68,10 @@ function cloud1(){
 		'z-index': '1',
 		display: 'block'
 	});
-	cloud1.delay(3000);
+	cloud1.delay(500);
 	cloud1.animate({
-		left: '400px'
-	}, 27000);
+		left: '600px'
+	}, 25000);
 }
 
 function cloud2(){
@@ -50,10 +86,10 @@ function cloud2(){
 		'z-index': '1',
 		display: 'block'
 	});
-	cloud2.delay(2000);
+	cloud2.delay(1500);
 	cloud2.animate({
 		left: '200px'
-	}, 27000);
+	}, 30000);
 }
 
 
@@ -71,7 +107,7 @@ function sunRise(){
   });
   sunshine.animate({
   	bottom: '5px'
-  }, 9000);
+  }, 10000);
 }
 
 $(function(){
@@ -80,6 +116,12 @@ $(function(){
 	cloud1();
 	cloud2();
 	sunRise();
+	$("#login").click(function(){
+		loginWindow();
+	});
+	$("#signup").click(function(){
+		signupWindow();
+	})
 	
 
 })
