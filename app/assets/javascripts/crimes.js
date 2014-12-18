@@ -71,20 +71,6 @@ function getData(options){
 	});
 }
 
-// function getInitialData(options){
-// 	var options   = options || crimeOptions()
-// 	console.log('about to fetch data')
-// 	$.ajax({
-// 		url: '/crimes', 
-// 		dataType: 'JSON', 
-// 		method: 'GET', 
-// 		success: function(data){
-// 			console.log('finished with data')
-// 			drawData(data);
-// 		}
-// 	});
-// }
-
 function crimeOptions(){
   var options = {};
   options.name = $('select#name').val();
