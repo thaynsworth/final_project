@@ -58,28 +58,51 @@
 			<button id="about_cancel">Back</button>
 		</div>
 	</div>
+	<% if logged_in? %>
+		<div id="profile_box">
+			<div id="profile_text">
+				<p>Profile Information</p>
+				<p id="notice"><%= notice %></p>
 
-	<div id="profile_box">
-		<div id="profile_text">
-			<p>Profile</p>
-			<p id="notice"><%= notice %></p>
+				<p>
+				  <strong>First name:</strong>
+				  <%= @current_user.first_name %>
+				</p>
 
-			<p>
-			  <strong>First name:</strong>
-			  <%= @user.first_name %>
-			</p>
+				<p>
+				  <strong>Last name:</strong>
+				  <%= @current_user.last_name %>
+				</p>
 
-			<p>
-			  <strong>Last name:</strong>
-			  <%= @user.last_name %>
-			</p>
+				<p>
+				  <strong>Email:</strong>
+				  <%= @current_user.email %>
+				</p>				
+				<button id="profile_cancel">Back</button>
+			</div>
+		<% else %>
+			<div id="profile_box">
+				<div id="profile_text">
+				<p>Profile Information</p>
+				<p id="notice"><%= notice %></p>
 
-			<p>
-			  <strong>Email:</strong>
-			  <%= @user.email %>
-			</p>				
-			<button id="profile_cancel">Back</button>
-		</div>
+				<p>
+				  <strong>First name:</strong>
+				  <%= @user.first_name %>
+				</p>
+
+				<p>
+				  <strong>Last name:</strong>
+				  <%= @user.last_name %>
+				</p>
+
+				<p>
+				  <strong>Email:</strong>
+				  <%= @user.email %>
+				</p>				
+				<button id="profile_cancel">Back</button>
+			</div>
+		<% end %>
 	</div>
 
 <script>
