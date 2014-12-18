@@ -7,13 +7,9 @@
 						<div class="stuff_in_box">
 								<p>WalkSafe</p>
 							<% if logged_in? %>
-								<button id="crime_map">
-									<%= link_to "Crime Map", crimes_path %>
-								</button>
+								<button id="crime_map"><%= link_to "Crime Map", crimes_path %></button>
 								<button id="profile">Profile</button>
-								<button id="logout">
-									<%= link_to "Log out", logout_path, method: "delete" %>
-								</button>		
+								<button id="logout"><%= link_to "Log out", logout_path, method: "delete" %></button>		
 							<% else %>
 								<button id="login">Log In</button> 
 								<button id="signup">Sign Up</button> 
@@ -30,7 +26,7 @@
 	<div id="login_box">
 		<div id="login_text">
 			<div id="stuff">
-				<p>Log in</p>
+				<p>Log In</p>
 			  <%= form_for(:session, url: login_path) do |f| %>
 
 			    <%= f.label :email %>
@@ -48,14 +44,16 @@
 
 	<div id="signup_box">
 		<div id="signup_text">
-			<%= render 'form' %>
+			<p>Sign Up</p>
+				<%= render 'form' %>
 			<button id="signup_cancel">Back</button>
 		</div>
 	</div>
 
 	<div id="about_box">
 		<div id="about_text">
-			<p>We are here to provide a service.</p>
+			<p class="about_title">About Us</p>
+			<p class="paragraph">WalkSafe provides you with up to date* crime information for the 5 boroughs of New York City. Whether you're walking, driving, buying a home or just curious, Walksafe will keep you informed.</p>
 			<button id="about_cancel">Back</button>
 		</div>
 	</div>
@@ -147,6 +145,16 @@
 	  	bottom: '5px'
 	  }, 10000);
 	}
+	// Doesn't work yet
+	// function onHover(){
+	// 	$( this ).hover(
+	//   	function() {
+	//   		$( this ).addClass( "hover" );
+	//   	}, function() {
+	//   		$( this ).removeClass( "hover" );
+	//   	}
+	// 	);
+	// }
 	
 	$(function(){
 

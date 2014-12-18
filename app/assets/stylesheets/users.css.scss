@@ -80,6 +80,7 @@ body {
 	width: 140px;
 	border-radius: 70px;
 	background-color: green;
+	text-decoration: none;
 }
 
 #profile {
@@ -165,7 +166,21 @@ body {
 	background-color: darkgrey;
 	opacity: 1;
 	margin-top: 60px;
-	margin-left: 45px;	
+	margin-left: 45px;
+}
+
+#signup_text p {
+	font-size: 30px;
+	margin-left: 250px;
+	margin-top: 60px;
+}
+
+.signup_form {
+	margin-left: 250px;
+}
+
+#signup_cancel {
+	margin-left: 250px;
 }
 
 #about_box {
@@ -196,6 +211,23 @@ body {
 	margin-top: 60px;
 	margin-left: 45px;	
 }
+
+.about_title {
+	font-size: 30px;
+	margin-left: 275px;
+	margin-top: 60px;
+}
+
+.paragraph {
+	font-size: 15px;
+	margin: 40px;
+}
+
+#about_cancel {
+	margin-left: 320px;	
+}
+
+
 
 
 

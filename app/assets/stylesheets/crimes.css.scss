@@ -15,14 +15,6 @@ body {
 	width:100%; 
 }
 
-#filters {
-  position: absolute;
-  top: 10px; right: 10px;
-  z-index: 3;
-  width: 15em;
-  height: 5em;
-}
-
 .my-legend {
   position: absolute;
   z-index: 2;
@@ -71,6 +63,22 @@ body {
   color: #777;
 }
 
-#map marker{
-  radius: 40;
+.legend_buttons {
+  // height: 20px;
+  // clear: both;
+  // margin: 20px;
+  // position: absolute;
+  bottom: 0px;
 }
+
+#filters {
+  position: fixed;
+  margin-top: 200px;
+  // top: 10px; right: 10px;
+  // z-index: 3;
+  width: 15em;
+  height: 20em;
+}
+// #map marker{
+//   radius: 40;
+// }

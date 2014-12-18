@@ -3,36 +3,45 @@
 
 <div class='my-legend'>
   <div class='legend-title'>The Crime Map(Jan 2014 - Aug 2014) </div>
-    <div class='legend-scale'>
-      <ul class='legend-labels'>
-        <li><span style='background:#d11141;'></span>Murder</li>
-        <li><span style='background:#00b159;'></span>Rape</li>
-        <li><span style='background:#00aedb;'></span>Robbery</li>
-        <li><span style='background:#f37735;'></span>Felony Assault</li>
-        <li><span style='background:#ffc425;'></span>Burglary</li>
-        <li><span style='background:#be29ec;'></span>Grand Larceny</li>
-        <li><span style='background:#ff66cc;'></span>Grand Larceny of Motor Vehicle</li>
-      </ul>
-    </div>
+  
+  <div class='legend-scale'>
+    <ul class='legend-labels'>
+      <li><span style='background:#d11141;'></span>Murder</li>
+      <li><span style='background:#00b159;'></span>Rape</li>
+      <li><span style='background:#00aedb;'></span>Robbery</li>
+      <li><span style='background:#f37735;'></span>Felony Assault</li>
+      <li><span style='background:#ffc425;'></span>Burglary</li>
+      <li><span style='background:#be29ec;'></span>Grand Larceny</li>
+      <li><span style='background:#ff66cc;'></span>Grand Larceny of Motor Vehicle</li>
+    </ul>
+  </div>
+
+  <div id="filters">
+    <select id="name">
+      <option>Crime Type</option>
+      <option>ALL CRIMES</option>
+      <option>MURDER</option>
+      <option>RAPE</option>
+      <option>ROBBERY</option>
+      <option>FELONY ASSAULT</option>
+      <option>BURGLARY</option>
+      <option>GRAND LARCENY</option>
+      <option>GRAND LARCENY OF MOTOR VEHICLE</option>
+    </select>
+  </div>
+  
+  <div class="legend_buttons">
+    <button id="home_map"><%= link_to "Home", root_path %></button> 
+    <button id="profile_map">Profile</button> 
+    <button id="logout_map"><%= link_to "Log out", logout_path, method: "delete" %></button> 
+  </div> 
+
   <div class='legend-source'>Source: <a href="http://www.nyc.gov/html/nypd/html/home/home.shtml">NYC Police Department</a></div>
+
 </div>
 
 <div id='map'>
   <h1>The Map</h1>
-</div>
-
-<div id="filters">
-  <select id="name">
-    <option>Crime Type</option>
-    <option>ALL CRIMES</option>
-    <option>MURDER</option>
-    <option>RAPE</option>
-    <option>ROBBERY</option>
-    <option>FELONY ASSAULT</option>
-    <option>BURGLARY</option>
-    <option>GRAND LARCENY</option>
-    <option>GRAND LARCENY OF MOTOR VEHICLE</option>
-  </select>
 </div>
 
 
