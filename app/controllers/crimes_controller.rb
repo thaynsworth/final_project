@@ -11,7 +11,11 @@ class CrimesController < ApplicationController
   end
 
   def search_by_name
-    crimes = Crime.where(name: params["name"])
+    if params["name"] == "ALL CRIMES"
+      crimes = Crime.all
+    else
+      crimes = Crime.where(name: params["name"])
+    end
     render json: crimes.to_json, status: 200
   end
 

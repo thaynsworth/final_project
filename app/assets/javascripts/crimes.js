@@ -28,7 +28,7 @@ function drawMap(){
   L.mapbox.accessToken = 'pk.eyJ1IjoidGhheW5zd29ydGgiLCJhIjoiWThsS0FVbyJ9.Ra30ahPRIVNTX9FBGK-hLg';
   map = L.mapbox.map('map', 'thaynsworth.kcl6gjeb', {
     zoomControl: false
-  }).setView([40.7127, -74.0059], 10)
+  }).setView([40.7127, -74.0059], 11)
 }
 
 function resetMap(){
@@ -70,6 +70,20 @@ function getData(options){
 		}
 	});
 }
+
+// function getInitialData(options){
+// 	var options   = options || crimeOptions()
+// 	console.log('about to fetch data')
+// 	$.ajax({
+// 		url: '/crimes', 
+// 		dataType: 'JSON', 
+// 		method: 'GET', 
+// 		success: function(data){
+// 			console.log('finished with data')
+// 			drawData(data);
+// 		}
+// 	});
+// }
 
 function crimeOptions(){
   var options = {};
