@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to WalkSafe!"
+      flash[:notice] = "Welcome to WalkSafe!"
       redirect_to :controller => 'users', :action => 'index'
     else
       render 'new'

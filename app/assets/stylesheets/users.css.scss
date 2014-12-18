@@ -27,9 +27,9 @@ body {
 .box {
 	background-color: white;
 	width: 600px;
-	height: 300px;
+	height: 400px;
 	margin: 20px;
-	border: 2px solid black;
+	border: 3px solid black;
 	border-radius: 7px;
 	opacity: 0.9;
 	z-index: 4;
@@ -42,12 +42,21 @@ body {
 
 .stuff_in_box {
 	margin-left: 80px;
+	top: 0;
 }
 
 .stuff_in_box p {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	// font-family: 'Raleway Dots', cursive;
+
 	color: black;
 	font-size: 60px;
-	margin-left: 70px;
+	margin-left: 0px;
+}
+
+.footprints {
+	height: 90px;
+	width: 70px;
 }
 
 .stuff_in_box button {
@@ -57,44 +66,100 @@ body {
 #login {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: green;
+	opacity: 0.9;
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#login:hover {
+	cursor: pointer;
+	opacity: 1.0;
 }
 
 #signup {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: yellow;
+	opacity: 0.8;
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#signup:hover {
+	cursor: pointer;
+	opacity: 1.0;
 }
 
 #about {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: red;
+	opacity: 0.8;
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#about:hover {
+	cursor: pointer;
+	opacity: 1.0;
+}
+
+#crime_map a:link, #crime_map a:visited, #crime_map a:hover, #crime_map a:active {
+	text-decoration: none;
 }
 
 #crime_map {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: green;
-	text-decoration: none;
+	opacity: 0.9;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	font-color: black;
+}
+
+#crime_map:hover {
+	cursor: pointer;
+	opacity: 1.0;
 }
 
 #profile {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: yellow;
+	opacity: 0.8;
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#profile:hover {
+	cursor: pointer;
+	opacity: 1.0;
 }
 
 #logout {
 	height: 140px;
 	width: 140px;
+	border: 2px solid black;
 	border-radius: 70px;
 	background-color: red;
+	opacity: 0.8;
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#logout a:link, #logout a:visited, #logout a:hover, #logout a:active, {
+	text-decoration: none;
+}
+
+#logout:hover {
+	cursor: pointer;
+	opacity: 1.0;
 }
 
 #login_box {
@@ -138,6 +203,7 @@ body {
 
 #stuff p {
 	font-size: 30px;
+	font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 #signup_box {
@@ -173,6 +239,7 @@ body {
 	font-size: 30px;
 	margin-left: 250px;
 	margin-top: 60px;
+	font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 .signup_form {
@@ -216,6 +283,7 @@ body {
 	font-size: 30px;
 	margin-left: 275px;
 	margin-top: 60px;
+	font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 .paragraph {
@@ -260,6 +328,13 @@ body {
 #profile_text p {
 	font-size: 30px;
 	align: center;
+	// font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#profile_text h2 {
+	font-size: 30px;
+	align: center;
+	font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 

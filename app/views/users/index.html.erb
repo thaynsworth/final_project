@@ -6,7 +6,8 @@
 				<div class="city">
 					<div class="box">
 						<div class="stuff_in_box">
-								<p>WalkSafe</p>
+								<p>
+									<img class="footprints" src="./FootPrints.png">WalkSafe</p>
 							<% if logged_in? %>
 								<button id="crime_map"><%= link_to "Crime Map", crimes_path %></button>
 								<button id="profile">Profile</button>
@@ -60,8 +61,8 @@
 	</div>
 	<% if logged_in? %>
 		<div id="profile_box">
-			<div id="profile_text">
-				<p>Profile Information</p>
+			<div>
+				<h2>Profile Information</h2>
 				<p id="notice"><%= notice %></p>
 
 				<p>
@@ -131,18 +132,6 @@
 		$('#profile_box').slideToggle();
 	}	
 
-	function onHover(){
-		$("button").mouseenter(function(){
-			$("button").css("background-color", "purple");
-			$("button").mouseleave(function(){
-				$("button").css("background-color", "green");
-				$("button").click(function(){			
-					loginWindow();
-					removeMainBox();
-				});	
-			});		
-		});
-	}
 	function cloud1(){
 		var cloud1 = $("<img class='cloud1' src='./cloud4.png'>");
 		$('div.cloud1').append(cloud1);
