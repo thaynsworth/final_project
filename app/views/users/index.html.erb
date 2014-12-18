@@ -1,4 +1,5 @@
 
+
 	<div class="cloud2">
 		<div class="cloud1">
 			<div class="sun">
@@ -58,6 +59,29 @@
 		</div>
 	</div>
 
+	<div id="profile_box">
+		<div id="profile_text">
+			<p>Profile</p>
+			<p id="notice"><%= notice %></p>
+
+			<p>
+			  <strong>First name:</strong>
+			  <%= @user.first_name %>
+			</p>
+
+			<p>
+			  <strong>Last name:</strong>
+			  <%= @user.last_name %>
+			</p>
+
+			<p>
+			  <strong>Email:</strong>
+			  <%= @user.email %>
+			</p>				
+			<button id="profile_cancel">Back</button>
+		</div>
+	</div>
+
 <script>
 	// Adds the click function	
 	// $("body").click(function() {
@@ -78,6 +102,10 @@
 
 	function aboutWindow(){
 		$('#about_box').slideToggle();
+	}	
+
+	function profileWindow(){
+		$('#profile_box').slideToggle();
 	}	
 
 	function onHover(){
@@ -175,6 +203,10 @@
 			aboutWindow();
 			removeMainBox();
 		});	
+		$("#profile").click(function(){
+			profileWindow();
+			removeMainBox();
+		});			
 		$("#login_cancel").click(function(){
 			loginWindow();
 			removeMainBox();
@@ -186,7 +218,11 @@
 		$("#about_cancel").click(function(){
 			aboutWindow();
 			removeMainBox();
-		});					
+		});		
+		$("#profile_cancel").click(function(){
+			profileWindow();
+			removeMainBox();
+		});							
 	});
 
 </script>
