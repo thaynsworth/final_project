@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-    crimePath = "#{Rails.root}/app/assets/javascripts/crime_json_data/crimelkjlk.json"
+    crimePath = "#{Rails.root}/app/assets/javascripts/crime_json_data/crime1.json"
     crimes = JSON.parse(File.read(crimePath))
     crimes.each do |crime|
       longitude = crime['geometry']['coordinates'][0]
