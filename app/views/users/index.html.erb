@@ -11,7 +11,7 @@
 							<% if logged_in? %>
 								<button id="crime_map"><%= link_to "Crime Map", crimes_path %></button>
 								<button id="profile">Profile</button>
-								<button id="logout"><%= link_to "Log out", logout_path, method: "delete" %></button>		
+								<button id="logout"><%= link_to "Log Out", logout_path, method: "delete" %></button>		
 							<% else %>
 								<button id="login">Log In</button> 
 								<button id="signup">Sign Up</button> 
@@ -55,13 +55,13 @@
 	<div id="about_box">
 		<div id="about_text">
 			<p class="about_title">About Us</p>
-			<p class="paragraph">WalkSafe provides you with up to date* crime information for the 5 boroughs of New York City. Whether you're walking, driving, buying a home or just curious, Walksafe will keep you informed.</p>
+			<p class="paragraph">WalkSafe provides you with an up-to-date* crime information visualization for the 5 boroughs of New York City. Whether you're walking, driving, buying a home or just curious, Walksafe will keep you informed!</p>
 			<button id="about_cancel">Back</button>
 		</div>
 	</div>
 	<% if logged_in? %>
 		<div id="profile_box">
-			<div>
+			<div id="profile_text">
 				<h2>Profile Information</h2>
 				<p id="notice"><%= notice %></p>
 
@@ -84,7 +84,7 @@
 		<% else %>
 			<div id="profile_box">
 				<div id="profile_text">
-				<p>Profile Information</p>
+				<h2>Profile Information</h2>
 				<p id="notice"><%= notice %></p>
 
 				<p>

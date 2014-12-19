@@ -325,16 +325,20 @@ body {
 	margin-left: 45px;
 }
 
-#profile_text p {
-	font-size: 30px;
-	align: center;
-	// font-family: 'Montserrat Subrayada', sans-serif;
+#profile_box p {
+	margin-left: 240px;
+
 }
 
-#profile_text h2 {
+#profile_box h2 {
 	font-size: 30px;
-	align: center;
+	margin-top: 120px;
+	margin-left: 150px;
 	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#profile_cancel {
+	margin-left: 240px;	
 }
 
 
