@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 gem 'bcrypt'
 gem 'pry'
 
+gem 'thin'
