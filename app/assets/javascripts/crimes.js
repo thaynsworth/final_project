@@ -11,15 +11,6 @@ typeData = {
 	'GRAND LARCENY OF MOTOR VEHICLE': {color: '#ff66cc'}
 };
 
-// var popup = L.popup();
-
-// function onMapClick(e) {
-//     popup
-//         .setLatLng(e.latlng)
-//         .setContent("You clicked the map at " + e.latlng.toString())
-//         .openOn(map);
-// }  
-
 function onMapClick(e) {
     alert("You clicked the map at " + e.latlng);
 }
@@ -84,7 +75,15 @@ function setHandlers(){
 }
 
 
-
-
-
 console.log('yoooooooooooo')
+
+
+// var popup = L.popup();
+
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent("You clicked the map at " + e.latlng.toString())
+//         .openOn(map);
+// }  
+
